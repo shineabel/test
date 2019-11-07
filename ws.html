@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.js"></script>
+</head>
+<body>
+    <div id="time" style="background-color: #eee;color: red;text-align: center;"></div>
+ 
+    <script>
+            var ws = new WebSocket("ws://127.0.0.1:5000/test");
+
+
+			   
+ 
+            ws.onmessage = function (event) {
+				console.log(event.data);
+                var para=document.createElement("p");   
+             var node=document.createTextNode(event.data);   
+             para.appendChild(node);  
+             var element=document.getElementById("time");  
+             element.appendChild(para);
+            };
+ 
+    </script>
+    </body>
+</html>
