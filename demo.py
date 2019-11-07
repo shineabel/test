@@ -10,7 +10,7 @@ def make_credential_http_header(appId, secret):
 
 
 def main():
-    result = make_credential_http_header("hello123", "ok")
+    result = make_credential_http_header("web", "0bcb002c-8906-4465-b9b7-8d47d3984b1f")
     print(result)
 
 
